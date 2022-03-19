@@ -1,5 +1,7 @@
-from random import randint 
-
+from random import randint
+"""
+Code to loop through each element in outerlist and join method used to combine the items in the list
+"""
 board = []
 
 for x in range(0, 7):
@@ -10,23 +12,29 @@ def print_board(board):
     print (" ".join(row))
 
 print_board(board)
-
+"""
+Code to hide battleship in a random location
+"""
 def random_row(board):
-  return randint(0, len(board) - 1)
+  return randint(0, 7)
 
 def random_col(board):
-  return randint(0, len(board[0]) - 1)
+  return randint(0, 7)
 
 ship_row = random_row(board)
 ship_col = random_col(board)
 print (ship_row)
 print (ship_col)
-
+"""
+Code to iterate though 7 turns
+"""
 for turn in range(7):
   print ("Turn", turn + 1)
   guess_row = int(input("Guess Row: "))
   guess_col = int(input("Guess Col: "))
-
+  """
+  Code to promt and allow the user to guess the location of a battleship. And actions after each guess.  
+  """
   if guess_row == ship_row and guess_col == ship_col:
     print ("YARRR! YE SUNK MY BATTLESHIP!")
     break
