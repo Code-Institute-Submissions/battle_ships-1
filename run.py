@@ -9,7 +9,7 @@ Setting up board in the traditional 7 by 7 grid for battle ships.
 Looping the "W" for "water" 7 times to make columns and rows.
 """
 for i in range(0,7):
-    board.append(["W"] * 7)
+    board.append(["O"] * 7)
 """
 Code to loop through each element in outerlist and join method used to combine the items in the list
 """
@@ -17,6 +17,8 @@ Code to loop through each element in outerlist and join method used to combine t
 def print_board(board):
   for row in board:
     print (" ".join(row))
+
+print_board(board)
 
 """
 Code to hide battleship in a random location
@@ -35,8 +37,17 @@ print (ship_row)
 print (ship_col)
 
 """
-Code to allow the user to guess the location of a battleship
+Code to promt and allow the user to guess the location of a battleship. 
 """
 
 guess_row = int(input("Guess Row: "))
 guess_col = int(input("Guess Column: "))
+
+
+
+if guess_row == ship_row and guess_col == ship_col:                    
+  print ("YARRR! YOU SUNK ME BATTLESHIP!")
+else:
+    print("MISS! YE BARNACLE BOTTOMED BOZO!")        
+    board[guess_row][guess_col] = "X"
+    print_board(board)
