@@ -44,10 +44,15 @@ guess_row = int(input("Guess Row: "))
 guess_col = int(input("Guess Column: "))
 
 
-
+"""
+Statments for actions after hit or miss 
+"""
 if guess_row == ship_row and guess_col == ship_col:                    
   print ("YARRR! YOU SUNK ME BATTLESHIP!")
 else:
-    print("MISS! YE BARNACLE BOTTOMED BOZO!")        
-    board[guess_row][guess_col] = "X"
-    print_board(board)
+    if guess_row not in range(7) or guess_col not in range(7):
+        print("BE YE BLIND? THAT BE OFF THE MAP!")
+    else:
+        print("MISS! YE BARNACLE BOTTOMED BOZO!")        
+        board[guess_row][guess_col] = "X"
+print_board(board)
