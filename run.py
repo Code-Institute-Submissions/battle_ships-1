@@ -1,7 +1,7 @@
 from random import randint
 
 print("TO PLAY, PLEASE SELECT A ROW AND COLUMN BETWEEN 0-6")
-
+# CREATE THE GAME BOARD
 board = []
 
 for x in range(0, 7):
@@ -16,6 +16,7 @@ def print_board(board):
 print_board(board)
 
 
+# HIDE THE BATTLE SHIP IN RANDOM LOCATION
 def random_row(board):
     return randint(0, 7)
 
@@ -29,11 +30,12 @@ ship_col = random_col(board)
 print()
 print()
 
+# ITERATE THROUGH 7 TURNS
 for turn in range(7):
     print("Turn", turn + 1)
     guess_row = int(input("Guess Row: "))
     guess_col = int(input("Guess Col: "))
-
+# TO ALLOW USER TO GUESS LOCATION OF SHIP AND ACTIONS AFTER GUESS
     if guess_row == ship_row and guess_col == ship_col:
         print("YARRR! YE SUNK MY BATTLESHIP!")
         break
