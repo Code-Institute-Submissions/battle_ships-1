@@ -1,4 +1,5 @@
 from random import randint
+import pyinputplus as pyip
 
 print("TO PLAY, PLEASE SELECT A ROW AND COLUMN BETWEEN 0-6")
 # CREATE THE GAME BOARD
@@ -33,8 +34,8 @@ print()
 # ITERATE THROUGH 7 TURNS
 for turn in range(7):
     print("Turn", turn + 1)
-    guess_row = int(input("Guess Row: "))
-    guess_col = int(input("Guess Col: "))
+    guess_row = int(pyip.inputNum("Guess Row: "))
+    guess_col = int(pyip.inputNum("Guess Col: "))
 # TO ALLOW USER TO GUESS LOCATION OF SHIP AND ACTIONS AFTER GUESS
     if guess_row == ship_row and guess_col == ship_col:
         print("YARRR! YE SUNK MY BATTLESHIP!")
