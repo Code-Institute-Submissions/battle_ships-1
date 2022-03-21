@@ -1,5 +1,11 @@
 from random import randint
 """
+Import randit module
+"""
+
+print("WELCOME TO BATTLESHIP TO PLAY PLEASE SELECT A ROW AND COLUMN BETWEEN 0-6")
+
+"""
 Code to loop through each element in outerlist and join method used to combine the items in the list
 """
 board = []
@@ -23,8 +29,8 @@ def random_col(board):
 
 ship_row = random_row(board)
 ship_col = random_col(board)
-print (ship_row)
-print (ship_col)
+print ()
+print ()
 """
 Code to iterate though 7 turns
 """
@@ -35,20 +41,22 @@ for turn in range(7):
   """
   Code to promt and allow the user to guess the location of a battleship. And actions after each guess.  
   """
-  if guess_row == ship_row and guess_col == ship_col:
+  if guess_row == ship_row and guess_col == ship_col: #triggered is guess is a hit
     print ("YARRR! YE SUNK MY BATTLESHIP!")
     break
   else:
-    if guess_row not in range(7) or guess_col not in range(7):
+    if guess_row not in range(7) or guess_col not in range(7):  #triggered is guess is off the board
       print ("BE YE BLIND? THAT BE OFF THE MAP!")
     elif board[guess_row][guess_col] == "X":
-      print("MEMORY OF A GOLDFISH! YE TRIED THAT ALREADY.")
+      print("MEMORY OF A GOLDFISH! YE TRIED THAT ALREADY.") #triggered is guess has already been made
     else:
-      print("MISS! YE BARNACLE BOTTOMED BOZO!")
+      print("MISS! YE BARNACLE BOTTOMED BOZO!") #triggered if guess is a miss
       board[guess_row][guess_col] = "X"
-    if (turn == 6):
-      print ("GAME OVER MAN, GAME OVER!")
+    if (turn == 7):
+      print ("GAME OVER MAN, GAME OVER!") #triggered on game end
     print_board(board)
+
+
 
 
 
