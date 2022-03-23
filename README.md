@@ -57,13 +57,19 @@ There is also a turn counter displayed after each attempt.
 ![Turn_count](assets/turn.png)
 
 
+## Testing
+The add has been extensively play tested and the code shows no errors when run through [PEP8 online check](http://pep8online.com/checkresult)
+
+![PEP8](assets/PEP8.png)
+
+
 ## Modules
 I have used one module in the making of this game
 
 - [Randint](https://www.geeksforgeeks.org/python-randint-function/) which is a function of the built-in random module for genertating random intergers. 
 
 ## Things I have learnt in the making of this game. 
-- I had initially used [PyInputPlus Module.](https://automatetheboringstuff.com/2e/chapter8/) after exploring how to show input error messages, but with some gentle nudging from a tutor decided to use input methods instead as they are much simpler. It did however give me the chance to learn about importing modules and installing Heroku installing them from the requirments.txt and how to fix an errors by pulling and freezing. 
+- I had initially used [PyInputPlus Module.](https://automatetheboringstuff.com/2e/chapter8/) after exploring how to show input error messages, but with some gentle nudging from a tutor decided to use input methods instead as they are much simpler. It did however give me the chance to learn about importing modules, installing them to the requirments.txt and how to fix an error by pulling and freezing. 
 - Unsused variables errors 'x' can be fixed by using _ as Pylint will ignore it [Stackoverflow](https://stackoverflow.com/questions/56542190/unused-variable-i-pylintunused-variable)
 - Using the "\n" newling character to for added readability [Flexple](https://flexiple.com/python-new-line/#:~:text=In%20Python%2C%20the%20new%20line,displayed%20in%20a%20new%20line.)
 - The correct implementation of docstrings [Vald-phoenix](https://vald-phoenix.github.io/pylint-errors/plerr/errors/basic/C0114.html)
@@ -72,3 +78,9 @@ I have used one module in the making of this game
 
 ## Credits
 The base code was written while doing a tutorial from [Codeacademy's](https://www.codecademy.com/courses/learn-python/lessons/battleship/exercises/welcome-to-battleship) tutorial on "How to make a battleship game in Python". 
+
+## Errors and future changes
+- There is one error that shows. 'ms-toolsai.jupyter extension is not synced, but not added in gitpod.yml' I think this is to do with Google Sheets and the templated provided. But it does not effect the app in anyway so I have decided to ingnore it. 
+- I would like to create a boarder so the text isn't so squashed to the left. 
+- I like to add multiplayer functions also. 
+- a grid would also make the game easier on the eye. 
