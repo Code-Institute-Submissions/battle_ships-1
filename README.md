@@ -1,31 +1,26 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships
 
-Welcome amj-web,
+A simple one player python console game of Battleships. The aim is to find the battleship that has been randomly generated and hidden on seven by seven grid.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Live Project
 
-## Reminders
+You can view the live project [here](https://battleships-amj.herokuapp.com/)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## How to play
+On running the game the user is prompted to enter numbers between 0-6 for a row and column and has seven turns to attempt to find the hidden battleship. 
 
-## Creating the Heroku app
+## Features
+Other than the greeting message, there are a number of messages that the user can trigger (in not so polite piratey language) informing them of the following. 
+- If a user makes a guess outside of the range on the board (Off the game board)
+- If the user misses. 
+- If the user enters a blank. 
+- If the user enters something that is not a number. 
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+There is also a turn counter displayed after each attempt.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Modules
+I have used two modules in the making of this game
+- [PyInputPlus Module.](https://automatetheboringstuff.com/2e/chapter8/) 
+- [Randint](https://www.geeksforgeeks.org/python-randint-function/) which is a function of the built-in random module. 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+I liked the neatness the PyInput offered. Through I understand that the same outcome could have been achieved through the normal input of allowing the user to enter a string. 
