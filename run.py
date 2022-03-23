@@ -49,7 +49,8 @@ def play():
     board = create_board()
     print_board(board)
 
-    # iterate through seven turns
+    # Iterate through seven turns,
+    # exit game if wanted and error message if string entered
     for turn in range(7):
         print("\n")
         print("Turn", turn + 1)
