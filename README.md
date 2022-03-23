@@ -5,7 +5,7 @@ A simple one player python console game of Battleships. The aim is to find the b
 ## Deployment
 The game has been depolyed to Heroku
 You can view the live project [here](https://battleships-amj.herokuapp.com/)
-[Game Screen](assets/HEROKU.png)
+(assets/HEROKU.png)
 
 ## How to play
 On running the game the user is prompted to enter numbers between 0-6 for a row and column and has seven turns to attempt to find the hidden battleship. 
